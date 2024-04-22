@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Creation</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden; /* Lock left and right overflow */
+        }
+
+        .background {
+            background-image: url('bgimg.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Transparent overlay */
+        }
+
+        .centered-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centered-button a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px 40px; /* Increased button size */
+            overflow: hidden;
+            font-weight: bold; /* Button text bold */
+            transition: all 0.3s;
+            background-color: #EF4444;
+            border-radius: 12px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .centered-button a .arrow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s ease-in-out;
+            background-color: #F87171;
+            border-radius: 50%;
+            display: inline-block;
+            visibility: hidden;
+            transform: translate(50%, -50%) rotate(45deg);
+        }
+
+        .centered-button a:hover .arrow {
+            visibility: visible;
+            right: -10px;
+            top: -10px;
+        }
+
+        .centered-button a:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(0);
+            background-color: #F87171;
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .centered-button a:hover:before {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="overlay"></div>
+        <div class="centered-button">
+            <a href="https://app.deriv.com/bot#bot_builder">
+                Get Started
+                <span class="arrow"></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
